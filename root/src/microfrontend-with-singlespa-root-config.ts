@@ -1,11 +1,9 @@
 import { registerApplication, start } from "single-spa";
 
 registerApplication({
-  name: "@single-spa/welcome",
-  app: () =>
-    System.import(
-      "https://unpkg.com/single-spa-welcome/dist/single-spa-welcome.js"
-    ),
+  name: "@microfrontend-with-singlespa/app1",
+  app: () => System.import("@microfrontend-with-singlespa/app1"),
+  //activeWhen is used to call another mfe when call this props
   activeWhen: ["/"],
 });
 
