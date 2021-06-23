@@ -1,7 +1,7 @@
 import { registerApplication, start } from "single-spa";
 
 registerApplication({
-  name: "@microfrontend-with-singlespa/app1",
+  name: "app1",
   app: () => System.import("@microfrontend-with-singlespa/app1"),
   //activeWhen is used to call another mfe when call this props
   //this example is always true
@@ -9,7 +9,7 @@ registerApplication({
 });
 
 registerApplication({
-  name: "@microfrontend-with-singlespa/app2",
+  name: "app2",
   app: () => System.import("@microfrontend-with-singlespa/app2"),
   //activeWhen is used to call another mfe when call this props
   //this example is mounted when /app2 is called
