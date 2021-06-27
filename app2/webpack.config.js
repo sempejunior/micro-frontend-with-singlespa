@@ -9,7 +9,8 @@ module.exports = (webpackConfigEnv, argv) => {
     argv,
   });
 
+  console.log(defaultConfig);
   return merge(defaultConfig, {
-    // modify the webpack config however you'd like to by adding to this object
+    externals: ["@material-ui/core", "@react-router-dom"],
   });
 };

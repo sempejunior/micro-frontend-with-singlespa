@@ -16,6 +16,14 @@ registerApplication({
   activeWhen: ["/app2"],
 });
 
+registerApplication({
+  name: "app3",
+  app: () => System.import("@microfrontend-with-singlespa/appvue"),
+  //activeWhen is used to call another mfe when call this props
+  //this example is mounted when /app2 is called
+  activeWhen: ["/app3"],
+});
+
 start({
   urlRerouteOnly: true,
 });

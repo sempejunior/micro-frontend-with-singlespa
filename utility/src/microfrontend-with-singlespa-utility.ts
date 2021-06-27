@@ -6,4 +6,7 @@ export function objectFactory() {
 
     console.log("Teste function");
 
+    return {
+        status: 'ok'
+    }
 }

@@ -12,6 +12,8 @@ module.exports = (webpackConfigEnv, argv) => {
     disableHtmlGeneration: true,
   });
 
+  console.log(defaultConfig);
+
   return merge(defaultConfig, {
     // modify the webpack config however you'd like to by adding to this object
     plugins: [
@@ -24,5 +26,8 @@ module.exports = (webpackConfigEnv, argv) => {
         },
       }),
     ],
+
+    externals: ["@material-ui/core", "react-router-dom"],
+
   });
 };
